@@ -1,0 +1,44 @@
+{% extends 'restaurant/base.html' %}
+{% load bootstrap3 %}
+{% block page %}
+  <div class="container">
+    <div class="carrousel-caption">
+      <h1>foodacity</h1>
+      <p></p>
+      <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Learn more </a></p>
+    </div>
+    <div class="panel">
+      <div class="panel-heading bg-blue">
+          <h4 class="panel-title text-center text-white">Restaurants</h4>
+      </div>
+      <div class="pane-body">
+
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr class="bg-gray text-white">
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Adress</th>
+
+                    <th class="text-center">Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for restaurant in restaurants %}
+                    <tr>
+                      <td scope="row">{{ restaurant_id }}</td>
+                      <td><a href="{% url 'restaurant_edit_meal' meal.id %}">{{ restaurant.name }}</a></td>
+                      <td>{{ restaurant.adress }}</td
+
+                      <td class="text-center">
+                        <img class="img-rounded" src=" {{ MEDIA_URL }}{{ request.user.restaurant.logo }} " width="50" height="50">
+                      </td>
+                    </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}

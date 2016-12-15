@@ -4,3 +4,14 @@ Pillow==3.3.0
 whitenoise==3.2.1
 dj-database-url==0.4.1
 psycopg2==2.6.2
+django-rest-framework-social-oauth2==1.0.4
+django-bootstrap3==7.0.1
+stripe-1.37.0
+urllib3-1.19.1
+cffi-1.9.1
+cryptography-1.6
+idna-2.1
+pyasn1-0.1.9
+pycparser-2.17
+pyopenssl-16.2.0
+ndg-httpsclient-0.4.2
